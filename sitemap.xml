@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Replace https://www.denzelsmartfinds.com with your real domain once you
+  own one, or leave as-is if you plan to buy denzelsmartfinds.com later.
+  Update <lastmod> dates when you meaningfully edit a page.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.denzelsmartfinds.com/index.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/about.html</loc><lastmod>2026-08-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/contact.html</loc><lastmod>2026-08-25</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/privacy.html</loc><lastmod>2026-08-25</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/disclosure.html</loc><lastmod>2026-08-25</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/terms.html</loc><lastmod>2026-08-25</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/search.html</loc><lastmod>2026-08-25</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <url><loc>https://www.denzelsmartfinds.com/categories/tech.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/categories/productivity.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/categories/students.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/categories/home-office.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/categories/books.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/categories/everyday.html</loc><lastmod>2026-08-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://www.denzelsmartfinds.com/articles/laptop-buying-guide.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/ram-guide.html</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/home-office.html</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/beginner-laptop-guide.html</loc><lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/student-tech.html</loc><lastmod>2026-06-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/power-bank-guide.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/remote-work-tools.html</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.denzelsmartfinds.com/articles/headphones-guide.html</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
