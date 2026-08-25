@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editing Guide — Denzel Smart Finds Admin</title>
+  <meta name="description" content="A simple, beginner-friendly guide to editing the Denzel Smart Finds website content.">
+  <link rel="canonical" href="https://www.denzelsmartfinds.com/admin/index.html">
+  <meta property="og:title" content="Editing Guide — Denzel Smart Finds Admin">
+  <meta property="og:description" content="A simple, beginner-friendly guide to editing the Denzel Smart Finds website content.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.denzelsmartfinds.com/admin/index.html">
+  <meta property="og:site_name" content="Denzel Smart Finds">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="../index.html">Denzel Smart Finds<span class="logo-dot">.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="../categories/tech.html">Tech &amp; Electronics</a>
+        <a href="../categories/productivity.html">Work &amp; Productivity</a>
+        <a href="../categories/students.html">Student Essentials</a>
+        <a href="../categories/home-office.html">Home Office</a>
+        <a href="../categories/books.html">Books &amp; Finance</a>
+        <a href="../categories/everyday.html">Everyday Products</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <div class="header-search">
+        <form role="search" action="../search.html" method="get">
+          <label class="sr-only" for="header-search-input" style="position:absolute;left:-9999px;">Search the site</label>
+          <input type="search" id="header-search-input" name="q" placeholder="Search guides, products..." autocomplete="off">
+        </form>
+        <div id="search-results-panel" role="listbox"></div>
+      </div>
+    </div>
+  </header>
+<main id="main">
+
+<div class="admin-wrap">
+  <span class="eyebrow">For the site owner</span>
+  <h1>Editing guide</h1>
+  <p>This is a static website — there's no database and no login. Everything you'll want to change day-to-day lives in one file: <code>js/data.js</code>. This page explains what to edit and where.</p>
+
+  <div class="admin-card">
+    <h3><span class="admin-step-num">1</span> Edit site content</h3>
+    <p>Open <code>js/data.js</code> in any text editor (Notepad, VS Code, or even a plain text app). It contains four sections:</p>
+    <ul>
+      <li><code>SITE</code> — your site name, tagline, contact email, and social links.</li>
+      <li><code>CATEGORIES</code> — the 6 category tiles and nav menu.</li>
+      <li><code>ARTICLES</code> — every guide/article card, and which page it links to.</li>
+      <li><code>PRODUCTS</code> — every product card, including price, rating, image, and Amazon link placeholders.</li>
+    </ul>
+    <p>To add a new product or article: copy an existing entry (the whole <code>{ ... }</code> block), paste it, and change the text inside the quotes. Save the file and refresh your browser — no build step required.</p>
+  </div>
+
+  <div class="admin-card">
+    <h3><span class="admin-step-num">2</span> Add your Amazon Associates link</h3>
+    <p>Once approved for Amazon Associates, find your tracking ID (it looks like <code>yoursite-20</code>). In <code>js/data.js</code>, replace every:</p>
+    <pre>"amazonUrl": "AMAZON_LINK_PLACEHOLDER"</pre>
+    <p>with your real product link plus your tag, for example:</p>
+    <pre>"amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE?tag=yoursite-20"</pre>
+    <p>Also replace matching <code>PRICE_PLACEHOLDER</code>, <code>PRODUCT_IMAGE_PLACEHOLDER</code>, and <code>RATING_PLACEHOLDER</code> values only once you've verified them directly on Amazon — never guess a price.</p>
+  </div>
+
+  <div class="admin-card">
+    <h3><span class="admin-step-num">3</span> Replace product images</h3>
+    <p>Save your image files into the <code>/images</code> folder, then in <code>js/data.js</code> change:</p>
+    <pre>"image": "PRODUCT_IMAGE_PLACEHOLDER"</pre>
+    <p>to a path like <code>"image": "images/laptop-1.jpg"</code>. (The current placeholder text keeps the site looking correct with no images yet — it won't break anything if you leave it as-is for now.)</p>
+  </div>
+
+  <div class="admin-card">
+    <h3><span class="admin-step-num">4</span> Connect the contact and newsletter forms</h3>
+    <p>Both forms currently only show a message on submit — they don't send email yet, because that requires a backend. Easiest beginner options:</p>
+    <ul>
+      <li><strong>Contact form:</strong> sign up for a free plan with a form service like Formspree or Getform, then point the form's <code>action</code> attribute (in <code>contact.html</code>) at the URL they give you.</li>
+      <li><strong>Newsletter:</strong> sign up with Mailchimp, Brevo, or similar, and paste the embed form action URL into the newsletter form's <code>action</code> attribute (in <code>index.html</code>) and update <code>SITE.newsletterProvider</code> in <code>js/data.js</code> as a reminder of what you connected.</li>
+    </ul>
+  </div>
+
+  <div class="admin-card">
+    <h3><span class="admin-step-num">5</span> Update your domain everywhere</h3>
+    <p>Once you buy <code>denzelsmartfinds.com</code> (or another domain), update:</p>
+    <ul>
+      <li><code>SITE.domain</code> in <code>js/data.js</code></li>
+      <li>The canonical URL and Open Graph tags at the top of every page (search for <code>denzelsmartfinds.com</code>)</li>
+      <li><code>sitemap.xml</code> and <code>robots.txt</code></li>
+    </ul>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Denzel Smart Finds</div>
+          <p>Straight-talking buying guides for students, remote workers, and everyday shoppers.</p>
+          <div class="footer-social">
+            <a id="social-tiktok" href="#" aria-label="TikTok">TT</a>
+            <a id="social-youtube" href="#" aria-label="YouTube">YT</a>
+            <a id="social-instagram" href="#" aria-label="Instagram">IG</a>
+            <a id="social-facebook" href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="../categories/tech.html">Tech &amp; Electronics</a></li>
+            <li><a href="../categories/productivity.html">Work &amp; Productivity</a></li>
+            <li><a href="../categories/students.html">Student Essentials</a></li>
+            <li><a href="../categories/home-office.html">Home Office</a></li>
+            <li><a href="../categories/books.html">Books &amp; Finance</a></li>
+            <li><a href="../categories/everyday.html">Everyday Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../search.html">Search</a></li>
+            <li><a href="../admin/index.html">Editing Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../disclosure.html">Affiliate Disclosure</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> Denzel Smart Finds. All rights reserved.</span>
+        <span>Some links on this site are affiliate links. <a href="../disclosure.html" style="text-decoration:underline;">Learn more</a>.</span>
+      </div>
+    </div>
+  </footer>
+<script src="../js/data.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/app.js"></script>
+  
+</body>
+</html>
